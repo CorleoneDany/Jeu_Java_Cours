@@ -56,10 +56,6 @@ public class Hero {
     public Integer setMaxStamina() {
         return MaxStamina;
     }
-	
-    public void PrintStat() {
-    	System.out.println("[Hero] \t" + this.Name + "\t Life : " + this.Life + "\t Stamina : " + this.Stamina);
-    }
     
     public boolean IsAlive() {
     	if (this.Life > 0) {
@@ -68,6 +64,16 @@ public class Hero {
     	else {
     		return false;
     	}
+    }
+    
+    @Override
+    public String toString() {
+        String status = (IsAlive()) ? "ALIVE" : "DEAD";
+        return "[Hero] \t" + this.Name + "\t LIFE: " + this.Life + "\t STAMINA: " + this.Stamina + "\t (" + status + ")";
+    }
+
+    public void PrintStats() {
+        System.out.println(toString());
     }
 	
 }
