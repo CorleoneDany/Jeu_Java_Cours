@@ -60,5 +60,14 @@ public class Hero {
     public void PrintStat() {
     	System.out.println("[Hero] \t" + this.Name + "\t Life : " + this.Life + "\t Stamina : " + this.Stamina);
     }
+    
+    public boolean IsAlive() {
+    	if (this.Life > 0) {
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    }
 	
 }
