@@ -1,4 +1,4 @@
-package Java_Atelier_2;
+package Jeu_Tp_1;
 
 public class Hero {
 	private String  Name;
