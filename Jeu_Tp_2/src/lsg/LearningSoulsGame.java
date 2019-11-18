@@ -28,6 +28,5 @@ public class LearningSoulsGame {
 		new Monster();
 		new Monster();
 		new Monster();
-		
 	}
 }

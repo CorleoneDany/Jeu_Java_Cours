@@ -1,30 +1,11 @@
-package Monster;
-// Déclaration de la classe Monster
-public class Monster {
-	private String  Name;
-	private Integer Life;
-	private Integer MaxLife;
-	private Integer Stamina;
-	private Integer MaxStamina;
-	static public Integer Instance_Count = 1;
-	
-	public Monster(String MonsterName) {
-		this.Name = MonsterName;
-		this.Life = 10;
-		this.MaxLife = 10;
-		this.Stamina = 10;
-		this.MaxStamina = 10;
-		PrintStats();
-	}
-	
-	public Monster() {
-		this.Name = "Monster_" + Instance_Count++;
-		this.Life = 10;
-		this.MaxLife = 10;
-		this.Stamina = 10;
-		this.MaxStamina = 10;
-		PrintStats();
-	}
+package Characters;
+
+public class Characters {
+	protected String  Name;
+	protected Integer Life;
+	protected Integer MaxLife;
+	protected Integer Stamina;
+	protected Integer MaxStamina;
 	
 	// Getter
     public String getname() {
@@ -56,8 +37,7 @@ public class Monster {
     public Integer setMaxStamina() {
         return MaxStamina;
     }
-	
-	
+    
 	public boolean IsAlive() {
     	if (this.Life > 0) {
     		return true;
@@ -67,13 +47,14 @@ public class Monster {
     	}
     }
 	
-	@Override
-	public String toString() {
+    @Override
+    public String toString() {
         String status = (IsAlive()) ? "ALIVE" : "DEAD";
-        return "[Monster] \t" + this.Name + "\t LIFE: " + this.Life + "\t STAMINA: " + this.Stamina + "\t (" + status + ")";
+        return ("[ " + getClass().getSimpleName() + "] \t" + this.Name + "\t LIFE: " + this.Life + "\t STAMINA: " + this.Stamina + "\t (" + status + ")");
     }
 
     public void PrintStats() {
         System.out.println(toString());
     }
+
 }
