@@ -12,7 +12,7 @@ public class Monster extends Characters {
 		this.MaxLife = 10;
 		this.Stamina = 10;
 		this.MaxStamina = 10;
-		//PrintStats();
+		this.PrintStats();
 	}
 	
 	public Monster() {
@@ -21,7 +21,7 @@ public class Monster extends Characters {
 		this.MaxLife = 10;
 		this.Stamina = 10;
 		this.MaxStamina = 10;
-		//PrintStats();
+		this.PrintStats();
 	}
     
 }

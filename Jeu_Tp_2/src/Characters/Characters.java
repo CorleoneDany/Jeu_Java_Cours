@@ -50,7 +50,8 @@ public class Characters {
     @Override
     public String toString() {
         String status = (IsAlive()) ? "ALIVE" : "DEAD";
-        return ("[ " + getClass().getSimpleName() + "] \t" + this.Name + "\t LIFE: " + this.Life + "\t STAMINA: " + this.Stamina + "\t (" + status + ")");
+        String result = String.format("%-20s%-20s%-20s%-20s", "[" + getClass().getSimpleName() + "]", Name, "LIFE: " + Life, "STAMINA: " + Stamina, "(" + status + ")");
+        return result; 
     }
 
     public void PrintStats() {

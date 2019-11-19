@@ -11,7 +11,7 @@ public class Hero extends Characters {
 		this.Life = 100;
 		this.MaxStamina = 50;
 		this.MaxLife = 100;
-		//this.PrintStats();
+		this.PrintStats();
 	}
 	
 	public Hero() {
@@ -20,7 +20,7 @@ public class Hero extends Characters {
 		this.Life = 100;
 		this.MaxStamina = 50;
 		this.MaxLife = 100;
-		//this.PrintStats();
+		this.PrintStats();
 	}
     	
 }
