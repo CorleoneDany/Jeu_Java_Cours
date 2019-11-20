@@ -1,5 +1,6 @@
 package lsg.helpers;
 
+import java.util.List;
 import java.util.Random;
 
 public class Dice {
@@ -21,25 +22,21 @@ public class Dice {
 		return random_num;	
 	}
 	
-	public String main() {
-		String test = "";
-		Integer val_min = 0;
-		Integer val_max = 0;
-		String[] val_tab;
+	public void main() {
+		Integer val_min = 25;
+		Integer val_max = 25;
+		Integer val;
 		for(Integer i = 0; i < 500; i++) {
-			i++;
-			test = test + roll() + " ";
-		}
-		val_tab = test.split(" ");
-		for(Integer i = 0; i < val_tab.length; i++) {
-			if((Integer.parseInt(val_tab[i]) < val_min)) {
-				val_min = Integer.parseInt(val_tab[i]);
+			val = roll();
+			System.out.print(val + " ");
+			if(val < val_min) {
+				val_min = val;
 			}
-			else if((Integer.parseInt(val_tab[i]) > val_max)) {
-				val_max = Integer.parseInt(val_tab[i]);
+			else if(val > val_max) {
+				val_max = val;
 			}
 		}
-		System.out.print(test);
-		return test;
+		System.out.println("\rVal max : " + val_max);
+		System.out.println("Val min : " + val_min);
 	}
 }
