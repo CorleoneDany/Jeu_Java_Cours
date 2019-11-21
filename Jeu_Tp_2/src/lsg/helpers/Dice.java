@@ -1,6 +1,5 @@
 package lsg.helpers;
 
-import java.util.List;
 import java.util.Random;
 
 public class Dice {
@@ -11,9 +10,9 @@ public class Dice {
 		this.random = new Random();
 	}
 	
-	public Dice(Integer NbOfFaces) {
+	public Dice(Integer faces) {
+		this.faces = faces;
 		this.random  = new Random();
-		this.faces = NbOfFaces;
 	}
 	
 	public Integer roll() {

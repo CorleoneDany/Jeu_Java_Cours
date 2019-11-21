@@ -1,45 +1,45 @@
 package Characters;
 
 public class Characters {
-	protected String  Name;
-	protected Integer Life;
-	protected Integer MaxLife;
-	protected Integer Stamina;
-	protected Integer MaxStamina;
+	protected String  name;
+	protected Integer life;
+	protected Integer maxLife;
+	protected Integer stamina;
+	protected Integer maxStamina;
 	
 	// Getter
     public String getname() {
-        return Name;
+        return name;
     }
     public Integer getlife() {
-        return Life;
+        return life;
     }
-    public Integer getMaxLife() {
-        return MaxLife;
+    public Integer getmaxLife() {
+        return maxLife;
     }
-    public Integer getStamina() {
-        return Stamina;
+    public Integer getstamina() {
+        return stamina;
     }
-    public Integer getMaxStamina() {
-        return MaxStamina;
+    public Integer getmaxStamina() {
+        return maxStamina;
     }
 
     // Setter
     public Integer setlife() {
-        return Life;
+        return life;
     }
-    public Integer setMaxLife() {
-        return MaxLife;
+    public Integer setmaxLife() {
+        return maxLife;
     }
-    public Integer setStamina() {
-        return Stamina;
+    public Integer setstamina() {
+        return stamina;
     }
-    public Integer setMaxStamina() {
-        return MaxStamina;
+    public Integer setmaxStamina() {
+        return maxStamina;
     }
     
 	public boolean IsAlive() {
-    	if (this.Life > 0) {
+    	if (this.life > 0) {
     		return true;
     	}
     	else {
@@ -50,7 +50,7 @@ public class Characters {
     @Override
     public String toString() {
         String status = (IsAlive()) ? "ALIVE" : "DEAD";
-        String result = String.format("%-20s%-20s%-20s%-20s", "[" + getClass().getSimpleName() + "]", Name, "LIFE: " + Life, "STAMINA: " + Stamina, "(" + status + ")");
+        String result = String.format("%-20s%-20s%-20s%-20s", "[" + getClass().getSimpleName() + "]", name, "life: " + life, "stamina: " + stamina, "(" + status + ")");
         return result; 
     }
 
